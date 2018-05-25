@@ -11,11 +11,11 @@ services:
       - TZ=Asia/Shanghai
     restart: always
     networks:
-      - rili-network
+      - rili-tech
     ports:
       - "3306:3306"
 
 networks:
-  rili-network:
+  rili-tech:
     external:
-      name: rili-network
+      name: rili-tech
