@@ -1,16 +1,18 @@
 version: '3'
 
 services:
-    mysql:
-        image: mysql:5.7
-        volumes:
-            - ./datadir:/var/lib/mysql
-            - ./conf.d:/etc/mysql/conf.d
-        environment:
-            - MYSQL_ROOT_PASSWORD=root
-            - TZ=Asia/Shanghai
-        restart: always
-        networks:
-            - rili-network
+  mysql:
+    image: mysql:5.7
+      volumes:
+          - ./datadir:/var/lib/mysql
+          - ./conf.d:/etc/mysql/conf.d
+      environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - TZ=Asia/Shanghai
+      restart: always
+      networks:
+          - rili-network
 networks:
   rili-network:
+    external: true
+    name: rili-network
