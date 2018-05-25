@@ -17,4 +17,5 @@ services:
 
 networks:
   rili-network:
-    name: rili-network
+    external:
+      name: rili-network
