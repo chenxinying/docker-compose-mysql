@@ -12,7 +12,6 @@ services:
     restart: always
     networks:
       - rili-tech
-      - ingress
     ports:
       - "3306:3306"
 
@@ -20,6 +19,3 @@ networks:
   rili-tech:
     external:
       name: rili-tech
-  ingress:
-    external:
-      name: ingress
