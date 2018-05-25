@@ -4,14 +4,17 @@ services:
   mysql:
     image: mysql:5.7
       volumes:
-          - ./datadir:/var/lib/mysql
-          - ./conf.d:/etc/mysql/conf.d
+        - ./datadir:/var/lib/mysql
+        - ./conf.d:/etc/mysql/conf.d
       environment:
-          - MYSQL_ROOT_PASSWORD=root
-          - TZ=Asia/Shanghai
+        - MYSQL_ROOT_PASSWORD=root
+        - TZ=Asia/Shanghai
       restart: always
       networks:
-          - rili-network
+        - rili-network
+      ports:
+        - "3306:3306"
+
 networks:
   rili-network:
     external: true
