@@ -7,14 +7,12 @@ services:
       - ./datadir:/var/lib/mysql
       - ./conf.d:/etc/mysql/conf.d
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=RL@rili.tech
       - TZ=Asia/Shanghai
     restart: always
     networks:
       - rili-tech
-    ports:
-      - "3306:3306"
-
+      
 networks:
   rili-tech:
     external:
