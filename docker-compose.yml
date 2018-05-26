@@ -12,6 +12,8 @@ services:
     restart: always
     networks:
       - rili-tech
+    ports:
+      - "3306:3306"
 
 networks:
   rili-tech:
